@@ -1,9 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2513
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green2\blue7;\red251\green2\blue7;
-}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c14913\c0;
-}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww12880\viewh15540\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -165,13 +163,13 @@ What are the advantages of this password policy?
 \ul Hostname & Partitions\
 \
 
-\f1\b0 \cf4 \ulnone Check the hostname:\cf2 \
+\f1\b0 \cf3 \ulnone Check the hostname:\cf2 \
 \
 
 \f0\b hostnamectl\
 \
 
-\f1\b0 \cf4 Change the hostname:\
+\f1\b0 \cf3 Change the hostname:\
 
 \f0\b \cf2 \
 hostnamectl set-hostname <new_hostname>\
@@ -186,13 +184,13 @@ hostnamectl set-hostname <new_hostname>\
 \f0\b sudo reboot\
 \
 
-\f1\b0 \cf4 View partitions:
+\f1\b0 \cf3 View partitions:
 \f0\b \cf2 \
 \
 lsblk\
 \
 
-\f1\b0 \cf4 What is LVM and how does it work?\
+\f1\b0 \cf3 What is LVM and how does it work?\
 \
 \cf2 LVM stands for \'91Logical Volume Manager\'92  and can be thought of as dynamic partitions, meaning that you can create/resize/delete LVM partitions from the command line even while your Linux system is running. \
 \
@@ -201,29 +199,29 @@ lsblk\
 \f0\b \ul Sudo\
 \
 
-\f1\b0 \cf4 \ulnone Check that sudo is installed:\cf2 \
+\f1\b0 \cf3 \ulnone Check that sudo is installed:\cf2 \
 \
 
 \f0\b dpkg -l | grep sudo\
 
 \f1\b0 \
-\cf4 What is the value of sudo and how does it operate?\cf2 \
+\cf3 What is the value of sudo and how does it operate?\cf2 \
 \
 Sudo stands for \'93super user do\'94 and it allows you to temporarily elevate your current user account to have root privileges, for example, to access restricted files and operations. So, if you run a Linux command with the prefix \'93sudo\'94, it will run that command with elevated privileges. It is considered the most user-friendly and safest way to elevate privileges. \
 \
-\cf4 How were the rules of sudo implemented?\cf2 \
+\cf3 How were the rules of sudo implemented?\cf2 \
 \
 Sudo can be configured by creating/editing a file in /etc/sudoers.d/. With the command 
 \f0\b sudo cat /etc/sudoers.d/<filename>
 \f1\b0 , you can see the configurations.\
 \
-\cf4 Verify that the /var/log/sudo/ folder exists and that it has at least one file in it:\cf2 \
+\cf3 Verify that the /var/log/sudo/ folder exists and that it has at least one file in it:\cf2 \
 \
 
 \f0\b sudo ls /var/log/sudo/
 \f1\b0 \
 \
-\cf4 Read the contents of the command log file:\cf2 \
+\cf3 Read the contents of the command log file:\cf2 \
 \
 
 \f0\b sudo cat /var/log/sudo/<filename>\
@@ -236,19 +234,19 @@ Sudo can be configured by creating/editing a file in /etc/sudoers.d/. With the c
 \f0\b \ul UFW\
 \
 
-\f1\b0 \cf4 \ulnone Check that ufw is installed:\cf2 \
+\f1\b0 \cf3 \ulnone Check that ufw is installed:\cf2 \
 \
 
 \f0\b dpkg -l | grep ufw\
 \
 
-\f1\b0 \cf4 Check hat ufw is working properly (i.e., is active) and list its active rules:
+\f1\b0 \cf3 Check hat ufw is working properly (i.e., is active) and list its active rules:
 \f0\b \cf2 \
 \
 sudo ufw status \
 \
 
-\f1\b0 \cf4 What is UFW and the value of using it?
+\f1\b0 \cf3 What is UFW and the value of using it?
 \f0\b \cf2 \
 \
 
@@ -256,7 +254,7 @@ sudo ufw status \
 \f0\b \
 \
 
-\f1\b0 \cf4 Add a new rule to open a port:\
+\f1\b0 \cf3 Add a new rule to open a port:\
 \
 
 \f0\b \cf2 sudo ufw allow <port_id>\ul \
@@ -264,7 +262,7 @@ sudo ufw status \
 
 \f1\b0 \ulnone Check that the rule has been added by checking ufw status. \
 \
-\cf4 Delete this rule:\
+\cf3 Delete this rule:\
 \
 \cf2 Check the number of the rule that wants to be deleted with 
 \f0\b sudo ufw status numbered 
@@ -279,31 +277,31 @@ Check that the rule has been deleted by checking ufw status.\
 \f0\b \ul SSH\
 \
 
-\f1\b0 \cf4 \ulnone Check that ssh is installed:\cf2 \
+\f1\b0 \cf3 \ulnone Check that ssh is installed:\cf2 \
 \
 
 \f0\b dpkg -l | grep ssh
 \f1\b0 \
 \
-\cf4 Check that ssh is working properly (i.e., is active):
+\cf3 Check that ssh is working properly (i.e., is active):
 \f0\b \cf2 \ul \
 \
 \ulnone sudo service ssh status\ul \
 \
 
-\f1\b0 \cf4 \ulnone What is SSH and the value of using it?
+\f1\b0 \cf3 \ulnone What is SSH and the value of using it?
 \f0\b \cf2 \ul \
 \
 
 \f1\b0 \ulnone SSH, or Secure Shell, is a network protocol that gives users a secure way to access a computer over an unsecured network. It provides strong password and public key authentication, as well as encrypted data communications between two computers. It is also widely used to manage systems and applications remotely, enabling them to log in to another computer over a network, execute commands and move files from one computer to another (e.g., GitHub).\
 \
-\cf4 Check the ports that SSH is running on:\cf2 \
+\cf3 Check the ports that SSH is running on:\cf2 \
 \
 
 \f0\b sudo grep /etc/ssh/sshd_config
-\f1\b0 \cf4 \
+\f1\b0 \cf3 \
 \cf2 \
-\cf4 Use SSH to log in with a user:\cf2 \
+\cf3 Use SSH to log in with a user:\cf2 \
 \
 
 \f0\b ssh <username>@127.0.0.1 -p 4242
@@ -317,21 +315,22 @@ Trying to log in with root will result in a \'93Premission denied.\'94 message.\
 \f0\b \ul Script Monitoring\
 \
 
-\f1\b0 \cf4 \ulnone What is cron?\
+\f1\b0 \cf3 \ulnone What is cron?\
 \cf2 \
 Cron is used to schedule jobs within software environments, known as cron jobs, to run periodically at fixed times, dates, or intervals. It typically automates system maintenance or administration or makes it useful for things like downloading files from the internet and downloading emails at regular intervals. \
 \
-\cf4 How does the script work?\cf2 \
+\cf3 How does the script work?\cf2 \
 \
 It defines multiple variables and stores information regarding architecture, CPU, etc. and then prints it with wall.\
 \
-\cf4 How to set up and configure a cron job?\
+\cf3 How to set up and configure a cron job?\
 \cf2 \
 By 
 \f0\b sudo crontab -u root -e
 \f1\b0 , you can edit the cron job with the format */min hour day_of_the_month month day_of_the_week /path_to_file.\
 \
-\cf4 How to stop cron jobs from running?\cf2 \
+\cf3 How to stop cron jobs from running?\cf2 \
 \
 
-\f0\b sudo service cron stop}
+\f0\b sudo service cron stop\
+}
