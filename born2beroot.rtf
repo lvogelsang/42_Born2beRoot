@@ -27,13 +27,13 @@ diff <eval_vid_file.txt> <signature.txt>\
 \f0\b \ul Project Overview\ulnone \
 
 \f1\b0 \
-\cf3 How does a virtual machine works?\cf0 \
+\cf3 How does a virtual machine work?\cf0 \
 \
 A virtual machine (VM) is a computer file that behaves like an actual computer. The VM is partitioned from the rest of the system, meaning that the software inside it can\'92t interfere with the host computer\'92s primary operating system (OS).\
 \
 \cf3 Choice of operating system and why?\cf0 \
 \
-An operating system is the low-level software that supports a computer\'92s basic functions. I have chosen Debian, because it is recommended for new system administrators. Other advantages are that it is user-friendly and supports many libraries, filesystems and architectures. \
+An operating system is the low-level software that supports a computer\'92s basic functions. I have chosen Debian because it is recommended for new system administrators. Other advantages are that it is user-friendly and supports many libraries, filesystems and architectures. \
 \
 CentOS, in contrast, is more complicated to install and update but offers more enterprise features.\
 \
@@ -47,7 +47,7 @@ They are both tools that handle package management, including installation, upda
 \
 \cf3 What is AppArmor?\
 \
-\cf2 AppArmor is a Mandatory Access Control (MAC) system on Linux to confine programs to a limited set of resources. It allows the system administrator to restrict programs capabilities like network access, raw socket acmes, and the permission to read, write, or executer files. It is installed with Debian by default and can be checked using 
+\cf2 AppArmor is a Mandatory Access Control (MAC) system on Linux to confine programs to a limited set of resources. It allows the system administrator to restrict programs capabilities like network access, raw socket access, and the permission to read, write, or execute files. It is installed with Debian by default and can be checked using 
 \f0\b /usr/sbin/aa-status
 \f1\b0 .\
 \
@@ -250,7 +250,7 @@ sudo ufw status \
 \f0\b \cf2 \
 \
 
-\f1\b0 UFW, or uncomplicated firewall, is a front end that provides a user-friendly framework for managing netfilter and a command line interface for working with the firewall. For example, you can use to allow/block incoming and outgoing connections from the server - such as ports, IP addresses or entire subnets. 
+\f1\b0 UFW, or uncomplicated firewall, is a front end that provides a user-friendly framework for managing netfilter and a command line interface for working with the firewall. For example, you can use it to allow/block incoming and outgoing connections from the server - such as ports, IP addresses or entire subnets. 
 \f0\b \
 \
 
@@ -308,7 +308,7 @@ Check that the rule has been deleted by checking ufw status.\
 \f1\b0 \
 \
 Follow authenticity prompts.\
-Trying to log in with root will result in a \'93Premission denied.\'94 message.\
+Trying to log in with root will result in a \'93Permission denied.\'94 message.\
 \
 \
 
